@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Monitor">
+        <SwitchPreference android:key="monitor.enabled"
+            android:title="Enabled"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="reporters.battery_level.enabled"
+            android:dependency="monitor.enabled"
+            android:title="Battery Level"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="reporters.gsm_signal_strength.enabled"
+            android:dependency="monitor.enabled"
+            android:title="GSM Signal Strength"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Debug">
+        <Preference android:title="List Capabilities"
+            android:key="debug_status"/>
+
+        <Preference android:title="Debug Database"
+            android:key="debug_database"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
